@@ -14,6 +14,20 @@ Last checked: **2026-10-22**. "Not stated" means we couldn't find it on the serv
 - **No account and no payment:** Duck.ai, Brave Leo (inside the Brave browser), Venice AI guest mode, Proton Lumo guest mode and Obscurify.ai guest chat.
 - **Verifiable encryption (TEE/E2EE):** Maple AI, Venice AI (Pro, on some models) and PPQ.ai (enclave) publish attestation-based designs. Obscurify.ai doesn't.
 
+## Which AI chat services have an open guest mode?
+
+Five of the services here let you chat without an account or a payment: Duck.ai, Brave Leo, Proton Lumo, Venice AI and Obscurify.ai. HuggingChat and Maple AI make you sign in before the first message. NanoGPT and PPQ.ai don't need an account either, but they need a prepaid balance first.
+
+| Service | What a guest gets | Guest limit | Over Tor |
+|---|---|---|---|
+| [Obscurify.ai](https://obscurify.ai) | Llama 3.3 70B, no cookies | 30 messages an hour | Yes, on its own onion address |
+| [Duck.ai](https://duck.ai) | The free models | A daily limit, counted without an account ([usage limits](https://duckduckgo.com/duckduckgo-help-pages/duckai/usage-limits)) | Not stated |
+| [Brave Leo](https://brave.com/leo/) | The free models, inside the Brave browser | None published; it depends on traffic ([Leo](https://brave.com/leo/)) | In Brave's private window with Tor |
+| [Proton Lumo](https://proton.me/lumo) | Guest chat | Not stated for guests; the free account has limited messages ([Lumo](https://proton.me/lumo)) | Yes, Proton says guests can connect through Tor |
+| [Venice AI](https://venice.ai) | "Try Venice without an account" ([sign-in](https://venice.ai/sign-in)) | Not stated for guests; a free account gets 10 text prompts a day ([pricing](https://venice.ai/pricing)) | Not stated |
+
+Guest modes rechecked on each service's own pages on 2026-11-10. On HuggingChat, "Start chatting" goes to the Hugging Face login.
+
 ## Comparison table
 
 | Service | Chat with no account | Paid account requires | Crypto | Monero | Uncensored models | Prompt storage (their policy) | Onion | GPT / Claude / Gemini | Main paid plan |
