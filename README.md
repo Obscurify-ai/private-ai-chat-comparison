@@ -12,7 +12,7 @@ Last checked: **2026-10-22**. "Not stated" means we couldn't find it on the serv
 - **Pay with Monero:** NanoGPT, PPQ.ai and Obscurify.ai say they accept Monero (XMR).
 - **Tor onion service:** Obscurify.ai runs its own onion address. Proton has an official onion site for its services, and Lumo says it works over Tor with guest access. Brave Leo works in Brave's private windows with Tor.
 - **No account and no payment:** Duck.ai, Brave Leo (inside the Brave browser), Venice AI guest mode, Proton Lumo guest mode and Obscurify.ai guest chat.
-- **Verifiable encryption (TEE/E2EE):** Maple AI, Venice AI (Pro, on some models) and PPQ.ai (enclave) publish attestation-based designs. Obscurify.ai doesn't.
+- **Verifiable encryption (TEE/E2EE):** Maple AI, Morse (E2EE chats on paid plans; open-source enclave you can check with one command), Venice AI (Pro, on some models) and PPQ.ai (enclave) publish attestation-based designs. Obscurify.ai doesn't.
 
 ## Which AI chat services have an open guest mode?
 
@@ -25,6 +25,7 @@ Five of the services here let you chat without an account or a payment: Duck.ai,
 | [Brave Leo](https://brave.com/leo/) | The free models, inside the Brave browser | None published; it depends on traffic ([Leo](https://brave.com/leo/)) | In Brave's private window with Tor |
 | [Proton Lumo](https://proton.me/lumo) | Guest chat | Not stated for guests; the free account has limited messages ([Lumo](https://proton.me/lumo)) | Yes, Proton says guests can connect through Tor |
 | [Venice AI](https://venice.ai) | "Try Venice without an account" ([sign-in](https://venice.ai/sign-in)) | Not stated for guests; a free account gets 10 text prompts a day ([pricing](https://venice.ai/pricing)) | Not stated |
+| [Morse](https://trymorse.ai/?src=gh-private-ai-chat-comparison) | Chat from the home page before signing up | Not stated for guests; free account available ([plans](https://trymorse.ai/plans)) | Not stated |
 
 Guest modes rechecked on each service's own pages on 2026-11-10. On HuggingChat, "Start chatting" goes to the Hugging Face login.
 
@@ -40,6 +41,7 @@ Guest modes rechecked on each service's own pages on 2026-11-10. On HuggingChat,
 | [Proton Lumo](https://proton.me/lumo) | Yes, guest | Proton account (may ask CAPTCHA, email or phone check) | BTC | Not stated | No | No logs; history zero-access encrypted | Proton onion site | No / No / No | Plus $12.99/mo ($9.99 yearly) |
 | [Brave Leo](https://brave.com/leo/) | Yes, in Brave browser | Premium account with email (unlinkable tokens) | Not stated | Not stated | No | Not stored on Brave's servers | Use in Brave Tor windows | Yes / Yes / No | Premium $14.99/mo |
 | [Maple AI](https://trymaple.ai) | No (free account, 25 msgs/week) | Email, GitHub, Google, Apple or "Anonymous" | BTC | Not stated | No | End-to-end encrypted, stored encrypted | Not stated | No / No / No (open models) | Pro $20/mo |
+| [Morse](https://trymorse.ai/?src=gh-private-ai-chat-comparison) | Yes, from the home page | Email | Not stated | Not stated | Yes, Pro plan | Stored encrypted on your device, not on Morse's servers ([policy](https://trymorse.ai/privacy-policy)) | Not stated | Yes / Yes / Yes | Pro $19/mo |
 | [HuggingChat](https://huggingface.co/chat) | No (login required) | Hugging Face account (email) | Not stated | Not stated | No | Conversation history stored for you | Not stated | No / No / No (open models) | HF PRO $9/mo |
 
 ## Notes by service
@@ -81,6 +83,12 @@ Guest modes rechecked on each service's own pages on 2026-11-10. On HuggingChat,
 ### Maple AI
 - Requires an account. The free tier is 25 messages a week ([pricing](https://trymaple.ai/pricing)). The sign-up page offers an "Anonymous" option.
 - Chats are encrypted with a per-account key inside an AWS Nitro Enclave running open-source code ([proof](https://maple.ai/proof)).
+
+### Morse
+- GPT, Claude, Gemini, DeepSeek and uncensored models in one web app. Uncensored models and end-to-end encrypted chats are on Pro ([plans](https://trymorse.ai/plans)).
+- "Your chats are stored on your device, not on our servers." and "Our servers don't log your messages." ([privacy policy](https://trymorse.ai/privacy-policy))
+- Messages pass through the Morse Enclave, which removes the account, email and IP address before a model provider sees them; the enclave's code is public ([morse-enclave](https://github.com/trymorse/morse-enclave)) and `npx @askmorse/verify` checks the running one ([privacy](https://trymorse.ai/privacy)).
+- Disclosure: this row was added by Morse.
 
 ### HuggingChat
 - Requires a Hugging Face login. Open-source app ([chat-ui](https://github.com/huggingface/chat-ui)) with open models.
